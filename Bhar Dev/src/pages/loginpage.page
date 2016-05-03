@@ -1,0 +1,14 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Login user</h1>
+  <apex:form ><br>
+ Username:<apex:inputText /></br>
+ 
+ <br>Password:<apex:inputSecret /></br>
+ <br>
+ <apex:commandButton action="{!submit}" value="login" id="theButton"/>
+  <apex:commandButton action="{!save}" value="Register" id="theon"/>
+</br>
+</apex:form>
+   <!-- End Default Content REMOVE THIS -->
+</apex:page>

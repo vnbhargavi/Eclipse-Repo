@@ -1,0 +1,31 @@
+<apex:page standardController="Account" extensions="firstcontroller,myController" showHeader="true">
+ 
+    <apex:pageBlock title="Hello {!$User.FirstName}">
+        
+    </apex:pageBlock>   
+    <apex:pageBlock title="Opportunities" mode="edit">
+        <apex:dataTable value="{!account.Opportunities}" var="opportunity" cellPadding="4" border="1">
+              <apex:column >
+               <apex:facet name="header">Opportunity Name</apex:facet>
+                {!opportunity.Name}
+              </apex:column>
+              <apex:column >
+               <apex:facet name="header">Close Date</apex:facet>
+                {!opportunity.CloseDate}
+              </apex:column>
+                      </apex:dataTable>
+     </apex:pageBlock>  
+     <apex:pageBlock title="Product">
+        <apex:dataTable value="{!account.Opportunities}" var="opportunity" cellPadding="4" border="1">
+              <apex:column >
+               <apex:facet name="header">Opportunity Name</apex:facet>
+                {!opportunity.Name}
+              </apex:column>
+              <apex:column >
+               <apex:facet name="header">Close Date</apex:facet>
+                {!opportunity.CloseDate}
+              </apex:column>
+                      </apex:dataTable>
+     </apex:pageBlock>         
+   <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false" title="false"/>
+</apex:page>

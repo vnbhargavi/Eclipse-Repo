@@ -1,0 +1,32 @@
+<apex:page controller="myController" tabStyle="Account">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+<apex:form >
+<br>Firstname:<apex:inputText /></br>
+<br>lastname:<apex:inputText /></br>
+<br></br>
+order:<input type="radio" name="ord" value="male"/>van<input type="radio" name="ord" value="fmale"/>truck
+<br></br>
+
+<br>Email:<apex:inputText /></br>
+<br>mobile:<apex:inputText /></br>
+<br></br>
+<apex:tabPanel selectedTab="Offers" id="tabpabel">
+<apex:tab label="One" name="name1" id="tabOne">content for tab one
+        <apex:pageBlock title="Congratulations {!$User.FirstName}">
+         You belong to the Account Name: <apex:inputField value="{!account.name}"/>
+         <apex:commandButton action="{!save}" value="save"/>
+      </apex:pageBlock>
+   </apex:tab>
+
+<apex:tab label="two" name="name2" id="tabtwo">content for tab two</apex:tab>
+
+</apex:tabPanel>
+
+<apex:commandButton action="{!save}" value="Order" id="theButton"/>
+
+
+</apex:form>
+</apex:page>

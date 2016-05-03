@@ -1,0 +1,36 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+     
+  <apex:sectionHeader /> 
+   <font size="6" style='b'>
+   <h1>Post ur ideas</h1>
+  </font>
+
+      <apex:pageBlock title="Describe ur idea"></apex:pageBlock>
+            <apex:form >
+            <center>
+<apex:commandButton action="{!save}" value="post" id="thebutton"/>
+<apex:commandButton action="{!cancel}" value="cancel" id="theBut"/>
+</center>
+     Title:&nbsp;<apex:inputText />
+   <br/>
+<br/>
+
+Description:&nbsp;&nbsp;&nbsp;<apex:inputTextarea required="true"/>
+<br/>
+<br/>
+Categories:<apex:inputTextarea />
+<apex:commandButton action="{!add}" value="add" id="theutton"/>
+<apex:commandButton action="{!remove}" value="remove" id="theuton"/>
+
+<apex:selectOption id="option" ></apex:selectOption>
+<apex:inputTextarea title="choosen"/>
+<apex:repeat var="string" id="theRepeat">
+hiiiiiii
+        <apex:outputText id="theValue"/><br/>
+
+    </apex:repeat>
+
+
+</apex:form>
+   </apex:page>
