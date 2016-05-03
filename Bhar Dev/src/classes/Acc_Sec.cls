@@ -7,7 +7,7 @@ public  class Acc_Sec {
    {
       Trigs.add(new Account(name = 'test ' +i));
                   
-      
+  //New comment added    
  }
 insert Trigs;
 
